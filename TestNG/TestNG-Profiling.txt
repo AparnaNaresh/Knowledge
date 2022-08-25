@@ -1,0 +1,27 @@
+Profiling is used to run a specific testng.xml file out of multiple files.
+---------------
+we should have maven-surefire plugin inside which we can add profiles
+
+<profiles>
+<profile>
+<id> Regression</id>
+<build>
+<plugins>
+<plugin>
+<suitXmlFile>regression.xml</suitXMLFile>
+</plugin>
+</plugins>
+</profile>
+
+<profile>
+<id> Smoke </id>
+<build>
+<plugins>
+<plugin>
+<suitXmlFile>smoke.xml</suitXMLFile>
+</plugin>
+</plugins>
+</profile>
+
+To run regression.xml use -------------> mvn test _PRegression
+To run smoke.xml use ----------------> mvn test _PSmoke

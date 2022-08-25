@@ -1,0 +1,15 @@
+For DataDrivenTesting
+===============
+@DataProvider(name="data")
+@Test
+public Object[][] data()
+{
+return Object[][] {{"firstvalue"},{"secondvalue"}};
+}
+
+
+@Test(dataProvider="data")
+@Test
+public void usedata(String valu)
+{
+}

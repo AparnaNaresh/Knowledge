@@ -1,0 +1,15 @@
+Employee Table
+name | salary
+aparna|1000
+naresh|2000
+Meenakshi|10000000
+
+
+MAximum salary
+
+Select name,MAX(salary) as MaxSal From Employee;
+
+Second Highest Salary
+
+Select name, MAX(salary) as maxsal2 where maxsal2<(select MAX(salary)  from Employee);
+
